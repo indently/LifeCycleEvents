@@ -19,28 +19,27 @@ struct ContentView: View {
                     }
                     .onDisappear {
                         print("View 1 is no longer visible")
-                }
+                    }
                 NavigationLink(destination: DetailView()) {
                     Text("Other View")
                 }
-        }.navigationBarHidden(true)
-      }
-        
+            }.navigationBarHidden(true)
+        }
     }
 }
 
 struct DetailView: View {
-   var body: some View {
-       VStack {
-           Text("Second View")
-       }
-       .onAppear {
-           print("View 2 has appeared!")
-       }
-       .onDisappear {
-           print("View 2 is no longer visible")
-       }
-   }
+    var body: some View {
+        VStack {
+            Text("Second View")
+        }
+        .onAppear {
+            print("View 2 has appeared!")
+        }
+        .onDisappear {
+            print("View 2 is no longer visible")
+        }
+    }
 }
 
 
